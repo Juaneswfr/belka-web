@@ -1,0 +1,138 @@
+/* ============================================================================================== 
+SED Innovations
+https://sed.am
+https://mkrtchyan.ga
+================================================================================================= */
+
+
+*{ font-family: 'Raleway';}
+ul {list-style-type: none;margin: 0;padding: 0;  }
+
+
+@keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-webkit-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-moz-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-ms-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+
+@keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
+}
+@-webkit-keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
+}
+@-moz-keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
+}
+@-ms-keyframes move-clouds-back {
+    from {background-position: 0;}
+    to {background-position:10000px 0;}
+}
+/* MAIN */
+main{z-index: 1;}
+body{overflow-x: hidden;padding-top: 150px; margin-bottom: 0;}
+body.custom-background{    background-color: #0D0F1F;}
+
+.stars, .twinkling{position:fixed;top:0;left:0;right:0;bottom:0;width:100%;height:100%;display:block;}
+.stars {background:#0D0F1F url(../image/bg_stars_1.png) repeat top center;z-index:-1;}
+
+.twinkling{background:transparent url(../image/bg_particle_1.png) repeat top center;z-index:-1;
+
+  -moz-animation:move-twink-back 200s linear infinite;
+  -ms-animation:move-twink-back 200s linear infinite;
+  -o-animation:move-twink-back 200s linear infinite;
+  -webkit-animation:move-twink-back 200s linear infinite;
+  animation:move-twink-back 200s linear infinite;
+}
+
+
+.main-rocket{position: absolute;z-index: 2;display: flex;left: calc(50% - 100px);top: 0;}
+.rocket{background: transparent url(../image/rocket_1.svg) no-repeat center;z-index:-1;}
+.rocket.levitating{}
+
+.main-rocket.ascending{}
+.main-rocket.ascending::after{ position:absolute ; background: transparent url(../image/rocket_propulsor_1.svg) no-repeat center; display: flex; content: ''; height: 50px; bottom: 0;left: 25px;z-index: 1;width: 50px;
+    transform: rotate(-180deg);animation: rocket-fire-active .1s linear alternate infinite;transition: .4s all;}
+
+@keyframes rocket-fire-active {
+    to {
+      transform: translateX(-1%) rotate(-180deg) scaleY(1.07); 
+    }
+}
+
+
+.comparisonSection {
+    position: relative;
+    padding-bottom: 56.25%; /* to maintain aspect ratio (responsive!) */
+  }
+  .comparisonImage {
+    width: 100%;
+    height: 100%;
+  }
+  .afterImage {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    transform: translate(100%, 0px);
+  }
+  .afterImage img {
+    transform: translate(-100%, 0px);
+  }
+  .comparisonImage img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+  }
+
+  
+  
+/* HEADER */
+
+#main-header{position: fixed; top: 0; width: 100%; display: flex; z-index: 2; height: 150px; transform: translateY(-150px); opacity: 0;}
+#main-header ul{display: flex; justify-content: center; margin: auto;}
+#main-header ul li{color: white; font-size: 2rem; margin: 10px;}
+#main-header .site-branding .custom-logo-link img{max-width: 125px;}
+
+/* HOME PRIMARY SECTION */
+#primary-section{ text-align: center;}
+#primary-section h1{font-family: 'Raleway'; font-size: 3rem; font-weight: 200; color: white;}
+
+/* HOME SECONDARY SECTION */
+#secondary-section{padding-top: 300px; position: relative;}
+#secondary-section .container-earth{ position: relative; padding: 100px 0; transform: translateY(400px);}
+
+#secondary-section .rocket{display: flex; width: 200px; height: 200px; top: 0; z-index: 2;}
+
+#secondary-section.active .main-rocket.ascending{}
+
+#secondary-section .earth {width: 1000px;height: 1000px;position: relative;top: 0;bottom: 0;z-index: 1;left: 0;right: 0;margin: auto;overflow: hidden;border-radius: 50%;box-shadow: 0 0 20px 20px #000 inset, 0 0 20px 2px #0000001f;}
+#secondary-section .earth:after {position: absolute;content: "";top: 0;bottom: 0;left: 0;right: 0;box-shadow: -20px -20px 50px 2px #000 inset;border-radius: 50%;}
+#secondary-section .earth > .circle {width: 200%;height: 100%;animation: spin-earth 60s linear alternate infinite;background: url(/assets/image/earth_home.jpg);background-size: cover;}
+#secondary-section .atmosfera{background:radial-gradient(circle, #ffffff 0%, #1c6d76 20%, #00d4ff00 60%);position: absolute; top: 0;     top: 0;bottom: 0;left: 0;right: 0;}
+
+  @keyframes spin-earth {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  
+#third-section{display: flex; justify-content: center; align-items: center;}
+
+
+
+.section-test{height: 800px;}
