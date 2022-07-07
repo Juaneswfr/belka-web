@@ -78,7 +78,7 @@ tlHeader.to("#main-header" , {
 // TRIGGER ANIMACIÓN HEADER
 
 ScrollTrigger.create({
-    trigger: ".section-test",
+    trigger: "#secondary-section",
     animation: tlHeader,
     markers: true,
     start: "center center",
@@ -87,5 +87,35 @@ ScrollTrigger.create({
 });
 
 
+let fourth_sectionHome = gsap.timeline({
+    scrollTrigger: {
+      trigger: '#fourth-section',
+      start: "-30% top",
+      end:  "bottom center" ,
+      toggleClass: {targets: $(".stars,.twinkling") , className:"black"},
+      markers: false,
+      scrub: 1,
+    },
+    
+  });
 
+
+  gsap.utils.toArray("#fourth-section").forEach(section => {
+	let tl = gsap.timeline({
+			scrollTrigger: {
+				trigger: section,
+				start: "center center",
+                // makes the height of the scrolling (while pinning) match the width, thus the speed remains constant (vertical/horizontal)
+				end: () => "+=" + section.offsetHeight, 
+				scrub: true,
+		        pin: true,
+                anticipatePin: 1,
+                toggleClass: "active"
+			},
+			defaults: {ease: "none"}
+		});
+
+});
+
+  
 

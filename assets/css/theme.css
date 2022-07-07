@@ -44,13 +44,23 @@ ul {list-style-type: none;margin: 0;padding: 0;  }
 }
 /* MAIN */
 main{z-index: 1;}
-body{overflow-x: hidden;padding-top: 150px; margin-bottom: 0;}
+body{overflow-x: hidden;padding-top: 100px; margin-bottom: 0;transition: .4s all;}
 body.custom-background{    background-color: #0D0F1F;}
+section{padding: 50px 25px; margin: auto;}
+a{text-decoration: unset;}
+
+.container-section{ max-width: 1700px; margin: auto;}
+
+/* HOME PRIMARY SECTION */
+.container-section{ text-align: center; min-height: 100vh; max-width: 1150px; margin: auto; width: 100%; display: flex; padding: 35px 50px;align-items: center;} 
+.container-section.full-w{max-width: none;} 
+.container-section.is-inview .heading-title{opacity: 1;}
 
 .stars, .twinkling{position:fixed;top:0;left:0;right:0;bottom:0;width:100%;height:100%;display:block;}
-.stars {background:#0D0F1F url(../image/bg_stars_1.png) repeat top center;z-index:-1;}
+.stars {background:#0D0F1F url(../image/bg_stars_1.png) repeat top center;z-index:-1; transition: .4s all;}
+.stars.black {background-color:#000; filter: blur(3px);}
 
-.twinkling{background:transparent url(../image/bg_particle_1.png) repeat top center;z-index:-1;
+.twinkling{background:transparent url(../image/bg_particle_1.png) repeat top center;z-index:-1; transition: .4s all;
 
   -moz-animation:move-twink-back 200s linear infinite;
   -ms-animation:move-twink-back 200s linear infinite;
@@ -58,6 +68,8 @@ body.custom-background{    background-color: #0D0F1F;}
   -webkit-animation:move-twink-back 200s linear infinite;
   animation:move-twink-back 200s linear infinite;
 }
+
+.twinkling.black{background:transparent url(../image/bg_particle_1_black.png) repeat top center;}
 
 
 .main-rocket{position: absolute;z-index: 2;display: flex;left: calc(50% - 100px);top: 0;}
@@ -103,13 +115,27 @@ body.custom-background{    background-color: #0D0F1F;}
   
 /* HEADER */
 
-#main-header{position: fixed; top: 0; width: 100%; display: flex; z-index: 2; height: 150px; transform: translateY(-150px); opacity: 0;}
-#main-header ul{display: flex; justify-content: center; margin: auto;}
-#main-header ul li{color: white; font-size: 2rem; margin: 10px;}
+#main-header{position: fixed; top: 0; width: 100%; display: flex; z-index: 2; height: 110px; transform: translateY(-150px); opacity: 0;}
+#main-header ul{display: flex; justify-content: center; margin: auto; align-items: center;}
+#main-header ul li a{color: white; font-size: 1rem; margin: 10px; text-decoration: unset; padding:2px 20px; font-style: italic; min-width: 150px; border:1px solid; border-radius: 25px; border-color: #ED1C24; transition: .4s all; display: block; text-align: center; font-weight: bold;}
+
+#main-header ul li a.active,
+#main-header ul li a:hover {background-color: #ED1C24; }
+
+#main-header ul li.logo a{border: 0px;}
+#main-header ul li.logo a.active,
+#main-header ul li.logo a:hover{background-color: unset;}
+
+
 #main-header .site-branding .custom-logo-link img{max-width: 125px;}
 
 /* HOME PRIMARY SECTION */
-#primary-section{ text-align: center;}
+#primary-section{ text-align: center; display: block;}
+
+
+.container-title{}
+.container-title .main-title{font-family: 'Raleway'; font-size: 3rem; font-weight: 200; color: white;}
+
 #primary-section h1{font-family: 'Raleway'; font-size: 3rem; font-weight: 200; color: white;}
 
 /* HOME SECONDARY SECTION */
@@ -131,7 +157,33 @@ body.custom-background{    background-color: #0D0F1F;}
     }
   }
   
-#third-section{display: flex; justify-content: center; align-items: center;}
+
+#third-section{display: flex; justify-content: center; max-width: 1700px;}
+#third-section .container-rocket{width: 30%;}
+
+#third-section .container-planets{display: flex; justify-content: center; align-items: center; width: 70%; }
+#third-section .container-planets a{color: white; font-weight: 600; text-decoration: unset; text-align: center;}
+#third-section .container-planets a h3{text-align: center; max-width: 135px; margin: auto; margin-bottom: 0px;}
+
+#third-section .container-title .main-title{font-size: 5rem; font-weight: 100; text-align: right;}
+
+#third-section .container-planets .planet{margin: 25px;}
+#third-section .container-planets .group-planets{display: flex; flex-wrap: wrap; max-width: 300px; width: 100%; transform: translateX(40px); }
+#third-section .container-planets .planet-1{ align-self: flex-end; transform: translateX(40px) translateY(-40px); }
+#third-section .container-planets .planet-2{ align-self: flex-start;}
+#third-section .container-planets .planet-3{ align-self: center;}
+#third-section .container-planets .planet-4{ align-self: flex-start;}
+#third-section .container-planets .planet-5{ align-self: flex-end;}
+
+
+#fourth-section{ position: relative; padding: 50px 25px;}
+#fourth-section .container-section{justify-content: center; min-height: 200vh;}
+#fourth-section .container-title{text-align: center; width: 100%;}
+#fourth-section .container-title.second{opacity: 0; transform: translateY(-30%); display: none  ;} 
+#fourth-section .black-hole-img{  width: 430px;  display: flex; position: fixed; top: 40px; left: -200px;}
+#fourth-section .astronauta-img{  width: 200px;  display: flex; position: fixed; bottom: 40px; right: -100px;}
+
+
 
 
 

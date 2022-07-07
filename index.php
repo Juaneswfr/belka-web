@@ -44,19 +44,20 @@
 
  <header id="main-header">
     <ul>
-        <li>TEST</li>
-        <li>TEST</li>
-        <li>TEST</li>
-        <li>TEST</li>
+        <li><a href="">Nosotros</a></li>
+        <li><a href="">Éxito</a></li>
+        <li class="logo"><a href=""><img src="assets/image/logo-belka-company-2.png" width="75px" alt=""></a></li>
+        <li><a href="">Servicios</a></li>
+        <li><a href="">Contacto</a></li>
     </ul>
  </header>
 
  
  <main>
 
-    <section id="primary-section" class="animate__animated  animate__fadeIn">
+    <section id="primary-section" class="animate__animated  container-section animate__fadeIn">
         <div class="container-image main-logo">
-            <img width="443" height="395" src="assets/image/logo-belka-company-2.png" alt="" loading="lazy">
+            <img width="300" height="300" src="assets/image/logo-belka-company-2.png" alt="" loading="lazy">
         </div>        
         <h1 class="heading-title elementor-heading-title">¿Estas listo para despegar?</h1>
     </section>
@@ -76,10 +77,6 @@
     </section>
 
 
-
-
-    <h1 class="header-section">Scroll to see the before/after</h1>
-
     <section class="comparisonSection">
     <div class="comparisonImage beforeImage">
         <img src="https://assets.codepen.io/16327/before.jpg" alt="before">
@@ -89,23 +86,95 @@
     </div>
     </section>
 
-    <h1 class="header-section">What did you think?</h1>
-
-
     <section id="third-section" class="">
         <div class="container-rocket">
-            <h2>¿Cuál es tu <br> <span> objetivo?</span></h2>
+            <div class="container-title">
+                <h2 class="main-title" >¿Cuál es tu <br> <strong> objetivo?</strong></h2>
+            </div>
             <div class="container-image">
-                <img src="assets/image/rocket_1.svg" width="400px" alt="">
+                <img src="assets/image/rocket_1.svg" width="250px" alt="">
             </div>
         </div>     
         <div class="container-planets">
-            <a href="">
-                <h3>Vender</h3>
-                <img src="assets/image/planet_vender.svg" alt="">
-            </a>
+            <div class="planet planet-1">
+                <a href="/" title="vender">
+                    <h3>Una nueva web</h3>
+                    <img src="assets/image/planeta_nueva_web.svg" width="180px" alt="">
+                </a>
+            </div>   
+            <div class="planet planet-2">
+                <a href="/" title="vender">
+                    <h3>Vender</h3>
+                    <img src="assets/image/planeta_vender.svg" width="180px" alt="">
+                </a>
+            </div>
+            <div class="planet planet-3">
+                <a href="/" title="vender">
+                    <h3>Obtener Leads</h3>
+                    <img src="assets/image/planeta_obtener_leads.svg" width="180px" alt="">
+                </a>
+            </div>   
+            <div class="group-planets">
+                <div class="planet planet-4">
+                    <a href="/" title="vender">
+                        <h3>Consolida tu área comercial</h3>
+                        <img src="assets/image/planeta_area_comercial.svg" width="180px" alt="">
+                    </a>
+                </div>   
+
+                <div class="planet planet-5">
+                    <a href="/" title="vender">
+                        <h3>Mejora tú presencia Digital</h3>
+                        <img src="assets/image/planeta_presencia_digital.svg" width="180px" alt="">
+                    </a>
+                </div>  
+            </div>
+            <div class="planet planet-6">
+                <a href="/" title="vender">
+                    <h3>Aumentar tu comunidad</h3>
+                    <img src="assets/image/planeta_aumenta_tu_comunidad.svg"  width="180px" alt="">
+                </a>
+            </div>    
         </div>   
     </section>
+
+    <section id="fourth-section" class="">
+        
+        <figure class="black-hole-img">
+            <img  src="/assets/image/agujero_negro.svg" width="380px" height="380px" alt="Hi Earthlings">
+        </figure>
+        <div class="container-section">
+            <div class="container-title">
+                <h2 class="main-title" >¿Aun no sabes?</h2>            
+            </div>  
+            <div class="container-title second">
+                <h2 class="main-title" >Hagamoslo <strong>Juntos</strong></h2>
+            </div>  
+        </div>   
+        <figure class="astronauta-img">
+            <img  src="/assets/image/astronauta.svg" width="250px" height="250px" alt="Hi Earthlings">
+        </figure>           
+    </section>
+    <section id="five-section" class="">
+        
+        <div class="container-form">
+            <form action="">
+                <div class="form-gruop">
+                    <input type="text" placeholder="Nombre">
+                </div>
+            </form>
+        </div>   
+        <div class="container-rocket">
+            <div class="container-title">
+                <h2 class="main-title" >O hablemos por <br> <strong> Whatsapp</strong></h2>
+            </div>
+            <div class="container-image">
+                <img src="assets/image/rocket_1.svg" width="250px" alt="">
+            </div>
+        </div>             
+    </section>
+
+
 
 
     <div class="section-test">
@@ -114,6 +183,12 @@
 
 
 </main>
+
+<script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+    <script src="/assets/js/jquery.easing.min.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/ScrollTrigger.min.js"></script>
